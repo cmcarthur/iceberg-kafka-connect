@@ -31,7 +31,7 @@ import org.apache.iceberg.PartitionSpec;
 import org.apache.iceberg.Schema;
 import org.apache.iceberg.Table;
 import org.apache.iceberg.data.Record;
-import org.apache.iceberg.encryption.PlaintextEncryptionManager;
+// import org.apache.iceberg.encryption.PlaintextEncryptionManager;
 import org.apache.iceberg.inmemory.InMemoryFileIO;
 import org.apache.iceberg.io.TaskWriter;
 import org.apache.iceberg.io.WriteResult;
@@ -67,7 +67,7 @@ public class BaseWriterTest {
     when(table.io()).thenReturn(fileIO);
     when(table.locationProvider())
         .thenReturn(LocationProviders.locationsFor("file", ImmutableMap.of()));
-    when(table.encryption()).thenReturn(new PlaintextEncryptionManager());
+    // when(table.encryption()).thenReturn(new PlaintextEncryptionManager());
     when(table.properties()).thenReturn(ImmutableMap.of());
   }
 
